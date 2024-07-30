@@ -26,7 +26,7 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = ({children}) => {
                 isLoading? (<SplashScreen callback={()=>setIsLoading(false)}/>) : (
                     <div className="flex flex-col min-h-screen">
                       <Navbar />
-                      <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+                      <main className="container mx-auto max-w-7xl pt-16 flex-grow">
                         {children}
                       </main>
                       <footer className="flex flex-col items-center justify-center p-2">
@@ -39,11 +39,11 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = ({children}) => {
                               </p> 
                             </div>
                             <Spacer y={10} />
-                            <p className="mr-52">
+                            <p className="sm:mr-52">
                                 {siteConfig.description}
                             </p>
                             <Spacer y={10} />
-                            <div className="flex flex-row gap-10">
+                            <div className=" grid grid-cols-2 w-full sm:flex sm:flex-row gap-10">
                               <div className="flex flex-col gap-3">
                                 <h2 className="font-semibold">
                                   Quick Links
@@ -74,7 +74,7 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = ({children}) => {
                             </div>
                             <Spacer y={10}/>
                             <div
-                              className="bg-content3 flex flex-row gap-4 p-8 rounded-xl items-center "
+                              className="bg-content3 flex flex-col sm:flex-row gap-4 p-8 rounded-xl items-start sm:items-center "
                             >
                               <div
                                 className="flex flex-col w-full"
@@ -93,14 +93,14 @@ export const DefaultLayout: React.FC<IDefaultLayoutProps> = ({children}) => {
                               <Input 
                                 type="email" 
                                 placeholder="JohnDoe@example.com"
-                                className="w-96"
+                                className="sm:w-96"
                                 startContent={
                                   <CiMail/>
                                 }
                               />
                               <Button
                                 size="md"
-                                className="flex-1 w-full"
+                                className="sm:flex-1 sm:w-full"
                                 color="primary"
                               >
                                 Subscribe

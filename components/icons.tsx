@@ -1,6 +1,12 @@
 import * as React from "react";
 
-import { IconSvgProps } from "@/types";
+import { ContactIconProps, ContactIconsMap, IconSvgProps } from "@/types";
+import { BsChat } from "react-icons/bs";
+import { CiMail } from "react-icons/ci";
+import { IoCallOutline } from "react-icons/io5";
+import { FiMapPin } from "react-icons/fi";
+
+
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -237,3 +243,22 @@ export const NextUILogo: React.FC<IconSvgProps> = (props) => {
     </svg>
   );
 };
+
+
+export const ContactIcon: React.FC<ContactIconProps> = ({iconName}) =>{
+
+  const contacIconsMap: ContactIconsMap = {
+    ["BsChat"]: <BsChat size={24}/>,
+    ["CiMail"]: <CiMail size={24}/>,
+    ["IoCallOutline"]: <IoCallOutline size={24}/>,
+    ["FiMapPin"]: <FiMapPin size={24}/>
+  }
+
+  return(
+    <>
+      {
+        contacIconsMap[iconName]
+      }
+    </>
+  )
+}
