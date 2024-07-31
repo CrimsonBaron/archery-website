@@ -1,13 +1,15 @@
+import FadeIn from "@/components/animation/fade-in";
+
 export default function PricingLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-lg text-center justify-center">
-        {children}
-      </div>
-    </section>
+    <FadeIn>
+        <section className="flex flex-col items-center justify-center gap-4 pb-8 md:pb-10 pt-3">
+          {children}
+        </section>
+    </FadeIn>
   );
 }

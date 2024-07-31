@@ -81,5 +81,59 @@ export const siteConfig = {
       href: "",
       disabled: false
     },
+  ],
+  pricingPlans: [
+    {
+      name: "Regular",
+      plans: [
+        {
+          name: "First lesson",
+          desciption: "Discover the thrill of archery with our free introductory lesson.",
+          price: "FREE",
+          introducturyLesson: true,
+          flexibleScheduling: true,
+          equipmentIncluded: true,
+        },
+        {
+          name: "Per lesson",
+          desciption: "Discover the thrill of archery with our free introductory lesson.",
+          price: "200 Kč",
+          introducturyLesson: false,
+          flexibleScheduling: true,
+          equipmentIncluded: true,
+
+        },
+        {
+          name: "10 lessons",
+          desciption: "Accelerate your archery skills with our comprehensive 10-lesson package. Benefit from structured learning and personalized guidance to improve your accuracy and technique.",
+          price: "1000 Kč",
+          introducturyLesson: false,
+          flexibleScheduling: true,
+          equipmentIncluded: true,
+
+        },
+      ]
+    },
+    {
+      name: "Seasonal",
+      plans: [
+        {
+          name: "Winter season",
+          desciption: "from 15th of october to 15th of april, 2x per week",
+          price: "1500 Kč",
+          introducturyLesson: false,
+          flexibleScheduling: true,
+          equipmentIncluded: true,
+        },
+        {
+          name: "Summer season",
+          desciption: "from 16th of april to 14th of october, 2x per week",
+          price: "2500 Kč",
+          introducturyLesson: false,
+          flexibleScheduling: true,
+          equipmentIncluded: true,
+        },
+      ]
+    }
   ]
 };
