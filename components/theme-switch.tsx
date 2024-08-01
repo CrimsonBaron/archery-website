@@ -14,16 +14,15 @@ export interface ThemeSwitchProps {
   classNames?: SwitchProps["classNames"];
 }
 
-export const ThemeSwitch: FC<ThemeSwitchProps> = ({
+export const ThemeSwitch: FC<ThemeSwitchProps> = function ThemeSwitchComponent({
   className,
   classNames,
-}) => {
+}) {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
 
-  const onChange = () => {
+  const onChange = () =>
     theme === "light" ? setTheme("dark") : setTheme("light");
-  };
 
   const {
     Component,
@@ -78,4 +77,9 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
       </div>
     </Component>
   );
+};
+
+ThemeSwitch.defaultProps = {
+  className: "",
+  classNames: undefined,
 };

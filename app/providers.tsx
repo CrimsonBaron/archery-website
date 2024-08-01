@@ -20,3 +20,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
     </NextUIProvider>
   );
 }
+
+Providers.defaultProps = {
+  themeProps: { atribute: "class" },
+};

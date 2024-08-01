@@ -1,4 +1,4 @@
-import React ,{ SVGProps } from "react";
+import React, { SVGProps } from "react";
 import { HTMLMotionProps } from "framer-motion";
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
@@ -6,11 +6,11 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 };
 
 export type AnimationProps = HTMLMotionProps<"div"> & {
-  children?: React.ReactNode
-}
+  children?: React.ReactNode;
+};
 
 export type ContactIconProps = {
-  iconName: string
-}
+  iconName: string;
+};
 
-export type ContactIconsMap = Record<string,React.ReactNode>;
+export type ContactIconsMap = Record<string, React.ReactNode>;
