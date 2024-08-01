@@ -86,7 +86,7 @@ export const siteConfig = {
       plans: [
         {
           name: "First lesson",
-          desciption:
+          description:
             "Discover the thrill of archery with our free introductory lesson.",
           price: "FREE",
           introducturyLesson: true,
@@ -95,7 +95,7 @@ export const siteConfig = {
         },
         {
           name: "Per lesson",
-          desciption:
+          description:
             "Discover the thrill of archery with our free introductory lesson.",
           price: "200 Kč",
           introducturyLesson: false,
@@ -104,7 +104,7 @@ export const siteConfig = {
         },
         {
           name: "10 lessons",
-          desciption:
+          description:
             "Accelerate your archery skills with our comprehensive 10-lesson p",
           price: "1000 Kč",
           introducturyLesson: false,
@@ -118,7 +118,7 @@ export const siteConfig = {
       plans: [
         {
           name: "Winter season",
-          desciption: "from 15th of october to 15th of april, 2x per week",
+          description: "from 15th of october to 15th of april, 2x per week",
           price: "1500 Kč",
           introducturyLesson: false,
           flexibleScheduling: true,
@@ -126,7 +126,7 @@ export const siteConfig = {
         },
         {
           name: "Summer season",
-          desciption: "from 16th of april to 14th of october, 2x per week",
+          description: "from 16th of april to 14th of october, 2x per week",
           price: "2500 Kč",
           introducturyLesson: false,
           flexibleScheduling: true,
