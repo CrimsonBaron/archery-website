@@ -1,16 +1,12 @@
-
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-
-import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-import { Navbar } from "@/components/navbar";
-import { SplashScreen } from "@/components/SplashScreen";
-import { DefaultLayout } from "@/layouts/defaultLayout";
+import DefaultLayout from "@/layouts/defaultLayout";
+
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +26,6 @@ export const viewport: Viewport = {
   ],
 };
 
-
 export default function RootLayout({
   children,
 }: {
@@ -46,9 +41,7 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-            <DefaultLayout>
-              {children}
-            </DefaultLayout>
+          <DefaultLayout>{children}</DefaultLayout>
         </Providers>
       </body>
     </html>
