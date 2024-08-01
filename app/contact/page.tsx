@@ -14,7 +14,7 @@ export default function ContactPage() {
    <>
      <section aria-label="contact form" className="w-full">
       <div
-        className="w-full h-full flex flex-row gap-4 justify-center items-center"
+        className="w-full h-full flex flex-col md:flex-row gap-4 justify-center items-center"
       >
         <div className="w-full h-[42rem] flex flex-col p-10 pt-20 bg-content2/80 rounded-2xl">
           <h2 className={title()}>
@@ -76,7 +76,7 @@ export default function ContactPage() {
     <Spacer y={10}/>
     <section aria-label="contact cards" className="w-full">
       <FadeIn className="w-full">
-        <div className="flex flex-row w-full h-80 gap-8">
+        <div className="flex flex-col sm:grid sm:grid-cols-2 xl:flex xl:flex-row w-full gap-8">
           {
             siteConfig.contactOptions.map((item)=>{
               return(
@@ -84,6 +84,7 @@ export default function ContactPage() {
                       <div className="p-4 bg-content3 rounded-xl flex">
                         <ContactIcon iconName={item.icon}/>
                       </div>
+                      <Spacer y={5}/>
                       <div className="flex-1"></div>
                       <h2 className={title({size: "sm"})}>{item.title}</h2>
                       <h3 className={`${subtitle()}`}>{item.description}</h3>

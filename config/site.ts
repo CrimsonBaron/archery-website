@@ -105,7 +105,7 @@ export const siteConfig = {
         },
         {
           name: "10 lessons",
-          desciption: "Accelerate your archery skills with our comprehensive 10-lesson package. Benefit from structured learning and personalized guidance to improve your accuracy and technique.",
+          desciption: "Accelerate your archery skills with our comprehensive 10-lesson p",
           price: "1000 Kč",
           introducturyLesson: false,
           flexibleScheduling: true,
