@@ -38,7 +38,7 @@ export default function PricingPage() {
         }
       </ButtonGroup>
       <Spacer y={10}/>
-      <div className="flex flex-row gap-8 w-full items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-8 w-full items-center justify-center">
         {
           siteConfig.pricingPlans[selectedIndex].plans.map((item)=>{
             return(
@@ -46,6 +46,7 @@ export default function PricingPage() {
                   <h2 className="font-bold">{item.name}</h2>
                   <h3>{item.desciption}</h3>
                   <div className="flex-1"></div>
+                  <Spacer y={5}/>
                   <h1 className={title({size:"sm"})}>{item.price}</h1>
                   <Spacer y={5}/>
                   <Button className="w-full" color="primary" href="/contact">Get  started</Button>
@@ -54,7 +55,7 @@ export default function PricingPage() {
           })
         }
       </div>
-      <div className="w-full p-2">
+      <div className="md:block hidden w-full p-2 ">
           <div className="flex w-full">
               <div className="font-bold text-lg ">Features</div>
               <div className="flex-1"></div>
