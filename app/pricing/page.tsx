@@ -1,15 +1,14 @@
 "use client";
 
 import { Spacer } from "@nextui-org/spacer";
-import { Button, ButtonGroup } from "@nextui-org/button";
 import { useState } from "react";
 import { Divider } from "@nextui-org/divider";
-import { FaCheck } from "react-icons/fa";
-import { ImCross } from "react-icons/im";
 
-import HoverScale from "@/components/animation/hover-scale";
 import { siteConfig } from "@/config/site";
 import { subtitle, title } from "@/components/primitives";
+import PricingCard from "@/components/pricing-card";
+import Feature from "@/components/feature";
+import PricingPlanSelector from "@/components/pricing-plan-selector";
 
 export default function PricingPage() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
@@ -23,37 +22,19 @@ export default function PricingPage() {
         </h2>
       </div>
       <Spacer y={5} />
-      <ButtonGroup>
-        {siteConfig.pricingPlans.map(({ name }, index) => (
-          <Button
-            key={name}
-            color={selectedIndex === index ? "primary" : "default"}
-            variant={selectedIndex === index ? "flat" : "solid"}
-            onClick={() => {
-              setSelectedIndex(index);
-            }}
-          >
-            {name}
-          </Button>
-        ))}
-      </ButtonGroup>
+      <PricingPlanSelector
+        callback={setSelectedIndex}
+        selectedIndex={selectedIndex}
+      />
       <Spacer y={10} />
       <div className="flex flex-col md:flex-row gap-8 w-full items-center justify-center">
         {siteConfig.pricingPlans[selectedIndex].plans.map((item) => (
-          <HoverScale
+          <PricingCard
             key={item.name}
-            className="flex flex-col justify-start items-start p-4 rounded-2xl bg-content2/80 flex-1 w-full h-64"
-          >
-            <h2 className="font-bold">{item.name}</h2>
-            <h3>{item.desciption}</h3>
-            <div className="flex-1" />
-            <Spacer y={5} />
-            <h1 className={title({ size: "sm" })}>{item.price}</h1>
-            <Spacer y={5} />
-            <Button className="w-full" color="primary" href="/contact">
-              Get started
-            </Button>
-          </HoverScale>
+            description={item.description}
+            name={item.name}
+            price={item.price}
+          />
         ))}
       </div>
       <div className="md:block hidden w-full p-2 ">
@@ -74,16 +55,7 @@ export default function PricingPage() {
           <div className="font-bold text-lg ">Introdactury lesson</div>
           <div className="flex-1" />
           {siteConfig.pricingPlans[selectedIndex].plans.map((item) => (
-            <>
-              <div className="font-bold text-lg text-center">
-                {item.introducturyLesson ? (
-                  <FaCheck className="text-success-300" />
-                ) : (
-                  <ImCross className="text-danger-300" />
-                )}
-              </div>
-              <div className="flex-1" />
-            </>
+            <Feature key={item.name} isFeature={item.introducturyLesson} />
           ))}
         </div>
         <Spacer y={3} />
@@ -91,16 +63,7 @@ export default function PricingPage() {
           <div className="font-bold text-lg ">Flexible Scheduling</div>
           <div className="flex-1" />
           {siteConfig.pricingPlans[selectedIndex].plans.map((item) => (
-            <>
-              <div className="font-bold text-lg text-center">
-                {item.flexibleScheduling ? (
-                  <FaCheck className="text-success-300" />
-                ) : (
-                  <ImCross className="text-danger-300" />
-                )}
-              </div>
-              <div className="flex-1" />
-            </>
+            <Feature key={item.name} isFeature={item.flexibleScheduling} />
           ))}
         </div>
         <Spacer y={3} />
@@ -108,16 +71,7 @@ export default function PricingPage() {
           <div className="font-bold text-lg ">Equipment included</div>
           <div className="flex-1" />
           {siteConfig.pricingPlans[selectedIndex].plans.map((item) => (
-            <>
-              <div className="font-bold text-lg text-center">
-                {item.equipmentIncluded ? (
-                  <FaCheck className="text-success-300" />
-                ) : (
-                  <ImCross className="text-danger-300" />
-                )}
-              </div>
-              <div className="flex-1" />
-            </>
+            <Feature key={item.name} isFeature={item.equipmentIncluded} />
           ))}
         </div>
       </div>
