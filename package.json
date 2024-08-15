@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
     "@nextui-org/button": "2.0.34",
     "@nextui-org/code": "2.0.29",
     "@nextui-org/divider": "^2.0.31",
@@ -30,6 +31,7 @@
     "@react-types/shared": "^3.23.1",
     "clsx": "2.1.1",
     "framer-motion": "~11.1.1",
+    "gsap": "^3.12.5",
     "intl-messageformat": "^10.5.0",
     "next": "14.2.4",
     "next-themes": "^0.2.1",
