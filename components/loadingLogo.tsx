@@ -92,16 +92,7 @@ const LoadingLogo: React.FC = function LoadingLogoComponent() {
           {
             opacity: 1,
             rotate: 0,
-            duration: 1,
-          },
-          "<",
-        )
-        .to(
-          "#bow",
-          {
-            delay: 0.23,
-            opacity: 1,
-            duration: 0.3,
+            duration: 0.8,
           },
           "<",
         );
