@@ -1,53 +1,20 @@
-# Next.js & NextUI Template
+# Archery Club Website
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+Welcome to the GitHub repository for the Lukostřelba Dolní Bousov's official website! This website is designed to provide information about the club, its activities, membership details, and resources for archers of all levels. It's built using Next.js for a modern and performant user experience.
 
 ## Technologies Used
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+* **Next.js:** React framework for server-side rendering, routing, and more.
+* **TypeScript:** Static typing for improved code quality and maintainability.
+* **HTML:** Structure and content of the website.
+* **CSS:** Styling and visual presentation.
+* **Tailwind CSS:** Utility-first CSS framework for rapid UI development.
+* **NextUI:** React component library built on top of Tailwind CSS for beautiful and accessible UI elements.
+* **pnpm:** Fast, disk space-efficient package manager.
 
-## How to Use
 
-### Use the template with create-next-app
+## Getting Started
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+1. **Clone the Repository:**
+   ```bash
+   git clone [invalid URL removed]
