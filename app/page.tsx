@@ -9,6 +9,7 @@ import { Logo } from "@/components/icons";
 import Bobing from "@/components/animation/bobing";
 import { Card, Carousel } from "@/components/card-carousel";
 import WobbleCard from "@/components/wobble-card";
+import Faq from "@/components/faq";
 
 const data = [
   {
@@ -150,29 +151,30 @@ export default function Home() {
         </div>
       </section>
       <Spacer y={20} />
-      <section aria-label="join us rn section" className="w-full h-full flex items-center justify-center flex-col gap-8">
-              <h1 className={title({size:"lg"})}>
-                Become the next archer master
-              </h1>
-              <h2 className=" text-lg text-black/50">
-                Join the wonderfull community at our range
-              </h2>
-              <Link
-              className={buttonStyles({
-                color: "primary",
-                radius: "full",
-                variant: "shadow",
-                size: "lg",
-              })}
-              href="/contact"
-            >
-              Join us now!
-            </Link>
+      <section
+        aria-label="join us rn section"
+        className="w-full h-full flex items-center justify-center flex-col gap-8"
+      >
+        <h1 className={title({ size: "lg" })}>Become the next archer master</h1>
+        <h2 className=" text-lg text-black/50 dark:text-white/50">
+          Join the wonderfull community at our range
+        </h2>
+        <Link
+          className={buttonStyles({
+            color: "primary",
+            radius: "full",
+            variant: "shadow",
+            size: "lg",
+          })}
+          href="/contact"
+        >
+          Join us now!
+        </Link>
       </section>
       <Spacer y={20} />
       <section aria-label="faq" className="gap-4 w-full p-14">
-        <div className="w-full h-full bg-content2/80 rounded-2xl p-3">
-              a
+        <div className="w-full h-full bg-content2/80 rounded-2xl p-8">
+          <Faq />
         </div>
       </section>
       <Spacer y={20} />
