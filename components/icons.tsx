@@ -256,3 +256,21 @@ export const ContactIcon: React.FC<ContactIconProps> =
 
     return <div>{contacIconsMap[iconName]}</div>;
   };
+
+export const Spline: React.FC<IconSvgProps> = function SplineComponent() {
+  return (
+    <svg
+      className="absolute w-full h-full"
+      fill="none"
+      height="3734"
+      viewBox="0 0 1594 3734"
+      width="1594"
+    >
+      <path
+        d="M1587 4.5c-157 218 33.6 584.1-888 608.5-921.6 24.4-302.5 704.5 485 765 522.5 0-423.593 823.89-581.5 945.5-509 392-1004.1 759.6-64.5 574 939.6-185.6 852.83 477.67 692 832.5"
+        stroke="#000"
+        stroke-width="15"
+      />
+    </svg>
+  );
+};
