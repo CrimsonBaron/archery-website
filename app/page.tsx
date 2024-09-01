@@ -79,6 +79,7 @@ export default function Home() {
                 size: "lg",
               })}
               href="/contact"
+              target="_self"
             >
               Join us now!
             </Link>
@@ -111,6 +112,9 @@ export default function Home() {
                 With over 100,000 mothly active bot users, Gippity AI is the
                 most popular AI platform for developers.
               </p>
+              <div className="w-full flex justify-end">
+                <Link href="/contact">see more...</Link>
+              </div>
             </div>
             <Image
               alt="linear demo image"
@@ -128,6 +132,9 @@ export default function Home() {
               If someone yells “stop!”, goes limp, or taps out, the fight is
               over.
             </p>
+            <div className="w-full flex justify-end">
+              <Link href="/contact">see more...</Link>
+            </div>
           </WobbleCard>
           <WobbleCard containerClassName="col-span-1 bg-content2/80 lg:col-span-3 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
             <div className="max-w-sm">
@@ -139,6 +146,9 @@ export default function Home() {
                 With over 100,000 mothly active bot users, Gippity AI is the
                 most popular AI platform for developers.
               </p>
+              <div className="w-full flex justify-end">
+                <Link href="/contact">see more...</Link>
+              </div>
             </div>
             <Image
               alt="linear demo image"
