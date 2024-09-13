@@ -58,9 +58,9 @@ export default function Home() {
 
   return (
     <FadeIn>
-      <section className=" flex p-16 dark:bg-dot-white/[0.3] bg-dot-black/[0.3] rounded-2xl">
-        <div className="flex flex-col gap-10 flex-1 w-full">
-          <div className="text-left w-full">
+      <section className=" flex p-8 md:p-12 lg:p-16 dark:bg-dot-white/[0.3] bg-dot-black/[0.3] flex-col lg:flex-row rounded-2xl">
+        <div className="flex flex-col gap-10 flex-1 w-full items-center justify-center">
+          <div className="text-center lg:text-left  w-full">
             <h1 className={title()}>Unleash your arrows.</h1>
             <br />
             <h1 className={title()}>Find your focus. Become legendary.</h1>
@@ -70,7 +70,7 @@ export default function Home() {
               friendships, and experience the thrill of hitting the mark.
             </h2>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 w-full justify-center lg:justify-start">
             <Link
               className={buttonStyles({
                 color: "primary",
@@ -85,75 +85,63 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <FadeIn className="aboslute" transition={{ duration: 1 }}>
+        <FadeIn className="mt-10" transition={{ duration: 1 }}>
           <Bobing className="">
-            <Logo className="scale-x-[-1] rotate-12 " size={450} />
+            <Logo className="scale-x-[-1] rotate-12 size-80  md:size-[450px] "/>
           </Bobing>
         </FadeIn>
-        <Spacer y={56} />
       </section>
       <section className="flex flex-col items-start justify-start gap-4 p-14 w-full">
-        <div className="text-left justify-start items-center w-full">
+        <div className=" text-center md:text-left justify-start items-center w-full mt-20 md:mt-0">
           <h1 className={title()}>Latest news at our club</h1>
         </div>
         <Carousel items={cards} />
       </section>
-      <section aria-label="taught by the best" className="p-14 gap-4 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
+      <section aria-label="taught by the best" className="p-4 md:p-14 gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
           <WobbleCard
             className=""
-            containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px] bg-content2/80"
+            containerClassName="col-span-1 md:col-span-3 lg:h-full lg:min-h-[500px] lg:min-h-[300px] bg-content2/80"
           >
-            <div className="max-w-xs">
-              <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]">
+            <div className="lg:max-w-xs">
+              <h2 className="text-center md:text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]">
                 Gippity AI powers the entire universe
               </h2>
-              <p className="mt-4 text-left text-base/6">
+              <p className="mt-4 text-center md:text-left text-base/6">
                 With over 100,000 mothly active bot users, Gippity AI is the
                 most popular AI platform for developers.
               </p>
-              <div className="w-full flex justify-end">
-                <Link href="/contact">see more...</Link>
-              </div>
             </div>
             <Image
               alt="linear demo image"
               className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
-              height={500}
               src="/linear.webp"
               width={500}
             />
           </WobbleCard>
-          <WobbleCard containerClassName="col-span-1 bg-content2/80 min-h-[300px]">
-            <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]">
+          <WobbleCard containerClassName="col-span-1 bg-content2/80 lg:min-h-[150px]">
+            <h2 className="text-center md:text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]">
               No shirt, no shoes, no weapons.
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left  text-base/6">
+            <p className="mt-4 max-w-[26rem] text-center md:text-left  text-base/6">
               If someone yells “stop!”, goes limp, or taps out, the fight is
               over.
             </p>
-            <div className="w-full flex justify-end">
-              <Link href="/contact">see more...</Link>
-            </div>
           </WobbleCard>
-          <WobbleCard containerClassName="col-span-1 bg-content2/80 lg:col-span-3 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+          <WobbleCard containerClassName="col-span-1 bg-content2/80 md:col-span-2 min-h-[100px] md:min-h-[200px] lg:min-h-[600px] xl:min-h-[300px]">
             <div className="max-w-sm">
-              <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]">
+              <h2 className="max-w-sm lg:max-w-lg text-center  md:text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em]">
                 Signup for blazing-fast cutting-edge state of the art Gippity AI
                 wrapper today!
               </h2>
-              <p className="mt-4 max-w-[26rem] text-left  text-base/6">
+              <p className="mt-4 max-w-[26rem] text-center md:text-left  text-base/6">
                 With over 100,000 mothly active bot users, Gippity AI is the
                 most popular AI platform for developers.
               </p>
-              <div className="w-full flex justify-end">
-                <Link href="/contact">see more...</Link>
-              </div>
             </div>
             <Image
               alt="linear demo image"
               className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
-              height={500}
               src="/linear.webp"
               width={500}
             />
@@ -163,7 +151,7 @@ export default function Home() {
       <Spacer y={20} />
       <section
         aria-label="join us rn section"
-        className="w-full h-full flex items-center justify-center flex-col gap-8"
+        className="w-full h-full flex items-center justify-center flex-col gap-8 text-center p-8 md:p-0"
       >
         <h1 className={title({ size: "lg" })}>Become the next archer master</h1>
         <h2 className=" text-lg text-black/50 dark:text-white/50">
@@ -182,7 +170,7 @@ export default function Home() {
         </Link>
       </section>
       <Spacer y={20} />
-      <section aria-label="faq" className="gap-4 w-full p-14">
+      <section aria-label="faq" className="gap-4 w-full p-4 md:p-14">
         <div className="w-full h-full bg-content2/80 rounded-2xl p-8">
           <Faq />
         </div>

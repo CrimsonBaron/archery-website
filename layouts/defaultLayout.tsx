@@ -21,7 +21,7 @@ const DefaultLayout: React.FC<IDefaultLayoutProps> =
         ) : (
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 flex-grow">
+            <main className="container mx-auto max-w-7xl md:pt-16 flex-grow">
               {children}
             </main>
             <Footer />

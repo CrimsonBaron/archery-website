@@ -14,6 +14,7 @@ export default function Error({
     /* eslint-disable no-console */
     console.error(error);
   }, [error]);
+  
 
   return (
     <div>
