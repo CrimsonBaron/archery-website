@@ -10,7 +10,7 @@ import BlogCard from "@/components/blog-card";
 export default function BlogPage() {
   return (
     <>
-      <div className="w-full h-[40rem] flex flex-col">
+      <div className="w-full h-[40rem] flex flex-col p-4">
         <Card isFooterBlurred className="border-none w-full h-full" radius="lg">
           <Image
             alt="Woman listing to music"
@@ -28,7 +28,7 @@ export default function BlogPage() {
         </Card>
       </div>
       <Spacer y={10} />
-      <div className="w-full flex flex-row">
+      <div className="w-full flex flex-row p-4">
         <h2 className={subtitle()}>Recent blog posts</h2>
         <div className="flex-1">
           <Link
@@ -39,11 +39,11 @@ export default function BlogPage() {
             href="/blog/all"
             target="_self"
           >
-            Join us now!
+            View all posts
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-3 grid-rows-3 gap-8 w-full ">
+      <div className="flex justify-center flex-col items-center md:grid grid-cols-3 grid-rows-3 gap-8 w-full p-4">
         <BlogCard />
         <BlogCard />
         <BlogCard />
