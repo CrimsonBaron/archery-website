@@ -11,3 +11,11 @@ Welcome to the GitHub repository for the Lukostřelba Dolní Bousov's official w
 * **Tailwind CSS:** Utility-first CSS framework for rapid UI development.
 * **NextUI:** React component library built on top of Tailwind CSS for beautiful and accessible UI elements.
 * **pnpm:** Fast, disk space-efficient package manager.
+
+## Current Issues
+- [ ] Fix deprecated packages
+- [ ] Refactor the design
+
+## In-progress preview
+
+![prieview.png](/public/preview.png)
